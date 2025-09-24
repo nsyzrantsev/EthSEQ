@@ -20,6 +20,7 @@
       if(.get.OS()=="linux")
       {
         aseq.exec = file.path(aseq.path,"ASEQ")
+        .message.Date(paste("ASEQ bin path ", aseq.exec, sep=""))
         for (b in bam.files)
         {
           .message.Date(paste("Computing pileup of BAM file ",b,sep=""))

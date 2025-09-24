@@ -97,11 +97,6 @@ ethseq.Analysis <- function(
     ## Execute ASEQ to generate genotypes
     table = data.frame(sample=gsub(".bam","",basename(bam.files)),bam=bam.files)
     genotype.dir = file.path(out.dir,"ASEQGenotypes","")
-    # if(!dir.exists(genotype.dir))
-    # {
-    #   .message.Date(paste("Create ",genotype.dir," folder",sep=""))
-    #   dir.create(genotype.dir)
-    # }
     
     .message.Date(paste("Run ASEQ to generate genotypes for ",length(bam.files)," samples",sep=""))
     if(run.genotype)

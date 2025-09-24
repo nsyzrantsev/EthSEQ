@@ -26,6 +26,7 @@
           .message.Date(paste("Computing pileup of BAM file ",b,sep=""))
           command = paste(aseq.exec," vcf=",file.path(out.dir,"ModelPositions.vcf")," bam=",b," mode=GENOTYPE threads=",cores," htperc=0.2 mbq=",mbq,
                           " mrq=",mrq," mdc=",mdc," out=",genotype.dir,sep="")
+          .message.Date(paste("Command ",command,sep=""))
           system(command,ignore.stderr = T,ignore.stdout = T)
         }
       }
